@@ -1,0 +1,1 @@
+# xma_l10nmx_nomina
