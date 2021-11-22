@@ -1,0 +1,40 @@
+
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="xmt_employee_form">
+          <field name="name">xmt.employee.form</field>
+          <field name="model">hr.employee</field>
+          <field name="inherit_id" ref="hr.view_employee_form"/>
+          <field name="arch" type="xml">
+           	<xpath expr="//page[@name='hr_settings']" position="after">
+           		<page name="prestaciones_hr" string="Pestaciones">
+                <div class="o_row">
+                  <div id="primero">
+                    <group string="Fonacot" name="fonacot_group">
+                        <field name="saldo_fonacot" widget="monetary"/>
+                        <field name="monto_descuento" string="Monto Descuento Periodico" widget="monetary"/>
+                    </group>
+                    <group string="Pension Alimenticia" name="pa_group">
+                        <field name="pension_alimenticia"/>
+                        <field name="porcentaje_pension" string="Pocentaje de Pension"/>
+                    </group>
+                  </div>
+                  <div id="segundo">
+                    <group string="Prestamos" name="prestamos_group">
+                        <field name="saldo_prestamo" string="Saldo" widget="monetary"/>
+                        <field name="monto_periodico" widget="monetary"/>
+                    </group>
+                    <group string="Despensa" name="despensa_group">
+                        <field name="porcentaje_despensa" string="Pocentaje de Despensa"/>
+                    </group>
+                  </div>
+                </div>
+           		</page>
+            </xpath>
+          </field>
+        </record>
+
+
+  </data>
+</odoo>
